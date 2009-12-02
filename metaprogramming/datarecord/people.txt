@@ -1,0 +1,5 @@
+name, points, country, likes
+'sarah', 200, 'USA', 'dog'
+'ashbb', 140, 'Japan', 'cat'
+'satish', 203, 'India', 'tiger'
+'vic', 1500, 'USA', 'elephant'

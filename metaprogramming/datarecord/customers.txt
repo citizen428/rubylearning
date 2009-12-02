@@ -1,0 +1,4 @@
+ID, account, tel, last_access, name
+'A-23-112', 'ashbb', 2234, 'Aug 13th', 'Satoshi'
+'B-34-122', 'tiger', 5543, 'May 1st', 'Satish'
+'A-15-982', 'pen', 7812, 'Sep 24th', 'Michael'
