@@ -1,8 +1,0 @@
-e0501classdog.rb
-e0502classrectangle.rb
-e0503deafgrandma2.rb
-e0504swapcontents.rb
-e0505changes.rb
-e0505inventory.rb
-e0506textanalyzer.rb
-list.txt

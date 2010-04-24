@@ -1,6 +1,0 @@
-1. "abcde" + 1 => raises a TypeError
-
-2. In line 3 (x = y or z) the assignment operator takes precedence over the 'or', line 5 ((x = y) or z) is a more explicit way of writing the same. Line 7 (x = (y or z)) uses parentheses to change the operator precedence (which could also have been achieved by doing x = y || z).
-
-3. In the string context % works like Kernel#format (see 'ri String#%'), so the output is a 5 digit decimal numbers including leading zeroes (00123).
-
