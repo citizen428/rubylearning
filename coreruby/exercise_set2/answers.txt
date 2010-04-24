@@ -1,0 +1,16 @@
+1. If the Ruby parser sees a symbol which could be a variable or a method, it treats it as a variable if there has been a previous assignment to this symbol. On the other hand "puts my_string()" outputs "Hello World" as does "puts self.my_string".
+
+Further information: "Programming Ruby" - "Names" - "Variable/Method Ambiguity" (http://whytheluckystiff.net/ruby/pickaxe/html/language.html#S3)
+
+3. Since the comma is not used as a command seperator in Ruby, 'arg1="Satish", arg2="Sunil", arg3="Marcos"' assigns everything on the right hand side of the first = to an array called after the left hand side of this assignment (arg1 in our case). This behaviour does NOT nest, so arg2 and arg3 only get one value each. This can be seen using irb:
+
+>> arg1="Satish", arg2="Sunil", arg3="Marcos"
+=> ["Satish", "Sunil", "Marcos"]
+>> arg1.class
+=> Array
+>> arg2.class
+=> String
+>> arg3.class
+=> String
+
+Further information: http://groups.google.com/group/ruby-talk-google/browse_thread/thread/4b5346ee0baafb60
