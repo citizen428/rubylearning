@@ -6,13 +6,13 @@
 =end
 
 def convert(temp_in_fahrenheit)
-  (temp_in_fahrenheit - 32) * 5 / 9
+  (temp_in_fahrenheit - 32) / 1.8
 end
 
 print 'Please enter temperature in Fahrenheit: '
 STDOUT.flush
-temp_to_convert = gets.to_f
-puts "#{temp_to_convert} degress Fahrenheit are #{"%.2f" % convert(temp_to_convert)} degrees Celsius."
+input_temp = gets.to_f
+puts "%.2fF = %.2fC." % [input_temp, convert(input_temp)]
  
 
 
