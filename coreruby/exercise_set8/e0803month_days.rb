@@ -12,9 +12,8 @@
 
 require 'Date'
 
-# see documentation for 'Date#<<' if you don't understand this
-def month_days(month=1, year=Time.now.year)
-  (Date.new(year,12,31)<<12-month).day
+def month_days(month, year=Time.now.year)
+  Date.new(year,month,-1).day
 end
 
 # tests
