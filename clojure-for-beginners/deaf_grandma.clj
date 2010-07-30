@@ -7,18 +7,18 @@
   (+ 1930 (rand-int 21)))
 
 (defn grandma
-  ([prompt]
-     (grandma prompt 0))
-  ([prompt bye-count]
-     (println prompt)
-     (let [input (read-line)]
-       (cond
-        (and (= bye-count 2)
-             (= input "BYE"))
-        (do (println "BYE SONNY!") (System/exit 0))
-        (= input "BYE") (grandma (str "NO, NOT SINCE " (rand-year) "!") (inc bye-count))
-        (all-caps input) (grandma (str "NO, NOT SINCE " (rand-year) "!") 0)
-        :else (grandma "HUH, SPEAK UP SONNY!" 0)))))
+  [prompt]
+  (loop [prompt prompt
+         bye-count 0]
+    (println prompt)
+    (let [input (read-line)]
+      (cond
+       (and (= bye-count 2)
+            (= input "BYE"))
+       (do (println "BYE SONNY!") (System/exit 0))
+       (= input "BYE") (recur (str "NO, NOT SINCE " (rand-year) "!") (inc bye-count))
+       (all-caps input) (recur (str "NO, NOT SINCE " (rand-year) "!") 0)
+       :else (recur "HUH, SPEAK UP SONNY!" 0)))))
 
 (defn -main
   []
