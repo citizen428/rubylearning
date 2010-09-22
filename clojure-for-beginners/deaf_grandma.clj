@@ -1,4 +1,4 @@
-(defn all-caps
+(defn all-caps?
   [input]
   (= input (.toUpperCase input)))
 
@@ -11,13 +11,14 @@
   (loop [prompt prompt
          bye-count 0]
     (println prompt)
-    (let [input (read-line)]
+    (let [input (read-line)
+          no (format "NO, NOT SINCE %d!" (rand-year))]
       (cond
        (and (= bye-count 2)
             (= input "BYE"))
        (do (println "BYE SONNY!") (System/exit 0))
-       (= input "BYE") (recur (str "NO, NOT SINCE " (rand-year) "!") (inc bye-count))
-       (all-caps input) (recur (str "NO, NOT SINCE " (rand-year) "!") 0)
+       (= input "BYE") (recur no (inc bye-count))
+       (all-caps? input) (recur no 0)
        :else (recur "HUH, SPEAK UP SONNY!" 0)))))
 
 (defn -main

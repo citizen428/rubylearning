@@ -2,7 +2,7 @@
  
 (defn in-celsius
   [temp]
-  (float (* (/ 5 9) (- temp 32))))
+  (* (/ 5 9) (- temp 32)))
  
 (defn average-as-float
   [elements]
@@ -10,9 +10,10 @@
  
 (defn avg-temp
   ([cities & [conv]]
-     (if conv
-       (average-as-float (map conv (map :temp cities)))
-       (average-as-float (map :temp cities)))))
+     (let [temps (map :temp cities)]
+       (if conv
+         (average-as-float (map conv temps))
+         (average-as-float temps)))))
  
-(println (str "Average temperature: " (format "%.2f" (avg-temp cities)) " degrees F"))
-(println (str "Average temperature: " (format "%.2f" (avg-temp cities in-celsius)) " degrees C"))
+(println (format "Average temperature: %.2f degrees F" (avg-temp cities)))
+(println (format "Average temperature: %.2f degrees C" (avg-temp cities in-celsius)))
