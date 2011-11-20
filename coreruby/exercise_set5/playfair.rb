@@ -12,7 +12,7 @@ class PlayfairCipher
   end
   
   def decrypt(msg)
-    crypt(msg.gsub(/(\w)\1/,"\\1")scan(/(.)(.)/), true)
+    crypt(msg.gsub(/(\w)\1/,"\\1").scan(/(.)(.)/), true)
   end
   
   def crypt(pairs, decrypt=false)

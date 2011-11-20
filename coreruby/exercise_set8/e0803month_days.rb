@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 =begin
   Write a method called month_days, that determines the number of days in a month. Usage:

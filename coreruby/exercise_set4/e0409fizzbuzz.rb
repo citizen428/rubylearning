@@ -30,7 +30,7 @@ end
 (1..100).each { |x| puts fb[x] }
 
 puts "Lambda approach:"
-fb = (0..100).to_a
+fb = [*0..100]
 m = lambda { |x, s| (x..100).step(x) { |i| fb[i].is_a?(String) ? fb[i] += s : fb[i] = s } }
 replacements = { 3 => "Fizz", 5  => "Buzz", 7  => "Dazz" }
 
