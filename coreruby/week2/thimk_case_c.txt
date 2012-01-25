@@ -1,0 +1,11 @@
+The variable `x` has been the left-hand side of an assignment, so the symbol is known (although nothing got assigned, hence the value `nil`). In this modified example
+
+    if false
+      x = pqr
+      pqr = foo
+    end
+    puts x
+    puts pqr
+    puts foo
+
+we now get two `nil` values and an error on `foo`.

@@ -1,0 +1,3 @@
+Since `expand` is seen on the left-hand side of an assignment, it gets
+initialized to `nil`. Because of this `defined?(expand)` will return a
+truthy value (`local-variable`) and `expand` – which is still `nil` – will be assigned to itself.

@@ -1,0 +1,21 @@
+The first version calls the method `mtdarry` which runs 10 times and prints the numbers 0-9. The second version prints the return value of the method after the execution of the method. This can be illustrated by changing the first program as follows (the output will now be the same as the output of the second version):
+
+    def mtdarry
+      10.times do |num|
+        puts num
+      end
+    end
+
+    x = mtdarry
+    puts x
+
+Another way to illustrate the described behavior is by changing the return value of the method "mtdarry" in the second version:
+
+    def mtdarry
+      10.times do |num|
+        puts num
+      end
+      "lala"
+    end
+
+    puts mtdarry

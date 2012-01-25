@@ -1,0 +1,1 @@
+The contents of `x` and `y` get swapped because Ruby assignments are done in parallel (See "Programming Ruby" - "Expressions" - "Assigment" - "Parallel Assignment").
