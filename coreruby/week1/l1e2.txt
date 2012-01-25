@@ -1,0 +1,1 @@
+`String#%` works like `Kernel#format` (see `ri String#%`), so the output is a 5 digit decimal numbers including leading zeroes (`00123`).

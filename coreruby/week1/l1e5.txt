@@ -1,0 +1,1 @@
+If the Ruby parser sees a bareword, it treats it as a variable if there has been a previous assignment to this symbol. On the other hand `puts my_string()` outputs "Hello World" as does `puts self.my_string`.

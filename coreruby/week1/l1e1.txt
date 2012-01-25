@@ -1,0 +1,1 @@
+In line 3 (`x = y or z`) the assignment operator takes precedence over the `or`, line 5 (`(x = y) or z)`) is a more explicit way of writing the same. Line 7 (`x = (y or z)`) uses parentheses to change the operator precedence (which could also have been achieved by doing `x = y || z`).
