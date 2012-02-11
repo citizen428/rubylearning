@@ -1,0 +1,4 @@
+The following answers are correct
+
+  *4. a.sort { |l, r| l.length <=> r.length } (uses Arrayr#sort)
+  *6. a.sort_by { |s| s.length } (uses Enumerable#sort_by)

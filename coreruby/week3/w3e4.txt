@@ -1,0 +1,1 @@
+1929, 1951 and 1952 will not be displayed because the array only contains the values 1930 to 1950 since `...` creates a non-inclusive range not containing the upper boundary.

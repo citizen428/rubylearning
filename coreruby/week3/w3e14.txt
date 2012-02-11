@@ -1,0 +1,5 @@
+The following answers return true:
+
+  *2. h.member?("Python")
+  *4. h.include?(Ruby)
+  *5. h.has_value?("Larry")

@@ -1,0 +1,1 @@
+First the method `method` gets called, which outputs the variable `a` from within the method's scope (where it gets set to 50). `puts a` displays the value of the variable `a` from the outer scope where it got set to 10.
